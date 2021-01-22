@@ -5,6 +5,9 @@ import { Bot } from "../lib/bot";
 import { Processor } from "../lib/processor";
 
 const BOT_TOKEN = process.env.MOD_BOT_TOKEN;
+if (!BOT_TOKEN) {
+  throw new Error("No token provided!");
+}
 const processor = new Processor();
 const bot = new Bot(BOT_TOKEN, processor);
 
