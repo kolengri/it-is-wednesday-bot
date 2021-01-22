@@ -66,6 +66,7 @@ export class Bot {
       url: apiUrl,
       body: payload,
     };
+
     try {
       if (!this.processing) {
         this.processing = true;

@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 import { NowRequest, NowResponse } from "@now/node";
 import { Bot } from "../lib/bot";
 import { Processor } from "../lib/processor";
@@ -7,10 +9,8 @@ const processor = new Processor();
 const bot = new Bot(BOT_TOKEN, processor);
 
 // to run bot locally,
-if (!process.env.IS_WEB) {
-  bot.runLocal();
-  console.info("Start bot local");
-}
+bot.runLocal();
+console.info("Start bot local");
 
 export default async function handle(req: NowRequest, res: NowResponse) {
   console.log("Server has initialized bot with: ", !!bot, req.body);

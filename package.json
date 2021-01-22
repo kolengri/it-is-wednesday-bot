@@ -1,7 +1,7 @@
 {
-  "name": "telegram-bot-motd",
+  "name": "is-is-wednesday-bod",
   "version": "2.0.0",
-  "description": "telegram-bot-motd",
+  "description": "is-is-wednesday-bod",
   "main": "index.js",
   "scripts": {
     "test": "serverless-bundle",
@@ -25,6 +25,7 @@
   "devDependencies": {
     "@now/node": "^1.8.4",
     "@vercel/ncc": "^0.24.1",
+    "dotenv": "^8.2.0",
     "tsc-watch": "^4.2.9",
     "typescript": "^4.0.3"
   }

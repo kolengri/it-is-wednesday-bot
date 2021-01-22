@@ -7,19 +7,27 @@ export class Processor {
   constructor() {
     this.processor = {
       "/info": this.about.bind(this),
+      "/чтоумеешь": this.idk.bind(this),
+      "/наконец полезный, блять бот!": this.aga.bind(this),
       "/yo": this.yo.bind(this),
       "/a": this.advice.bind(this),
     };
   }
-  
+
   unknown() {
-    return "неизвесная команда, попробуй */a*, */info*, */yo*";
+    return "Да ничего!))))";
   }
   about() {
     return "доступные команды: */a*, */info*, */yo*";
   }
   yo() {
     return "yo👍";
+  }
+  idk() {
+    return "Ничего))00))))";
+  }
+  aga() {
+    return "Еще бы))00))))";
   }
   async advice() {
     try {
